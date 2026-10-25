@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Operadora Antigua Guatemala</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Tour Operadora "Antigua Guatemala"</h1>
+        <p>Antigua Guatemala, Sacatepequez</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="sec-consulta">
+            <h2 id="sec-consulta">Consultar Tours y Excursiones</h2>
+            <form id="form-consulta">
+                <div>
+                    <label for="tipo">Categoria de Tour:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="todas">Todas las categorias</option>
+                        <option value="sencilla">Caminatas y Cafetaleros</option>
+                        <option value="doble">Volcanes y Aldeas</option>
+                        <option value="suite">Tours Privados / VIP</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="personas">Numero de Personas (1 a 6):</label>
+                    <input type="number" id="personas" name="personas" value="1" min="1" max="6">
+                </div>
+            </form>
+
+            <p id="estado-busqueda" role="status" aria-live="polite"></p>
+            <ul id="lista-habitaciones" aria-busy="false"></ul>
+        </section>
+
+        <section aria-labelledby="sec-reserva">
+            <h2 id="sec-reserva">Reservacion de Tour</h2>
+            <form id="form-reservacion" novalidate>
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electronico:</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" required>
+                </div>
+
+                <div>
+                    <label for="habitacionSelect">Seleccionar Tour:</label>
+                    <select id="habitacionSelect" name="habitacionId" required></select>
+                </div>
+
+                <div>
+                    <label for="noches">Dias / Duracion del Tour (1 a 14):</label>
+                    <input type="number" id="noches" name="noches" value="1" min="1" max="14" required>
+                </div>
+
+                <button type="submit" id="btn-enviar">Confirmar Reservacion</button>
+            </form>
+
+            <div id="resultado-reserva" role="status" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Tour Operadora Antigua Guatemala · Sacatepequez</p>
+    </footer>
+
+    <script src="js/apoyo.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

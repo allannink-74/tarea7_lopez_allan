@@ -1,0 +1,3 @@
+Nombre completo: Allan Jose Lopez Garcia
+Carne: 2453270
+URL con la que se prueba: http://localhost/tarea7_lopez_allan/
