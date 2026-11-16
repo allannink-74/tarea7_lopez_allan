@@ -53,3 +53,8 @@ INSERT IGNORE INTO tours (id, nombre, descripcion, precio_persona, cupo_maximo, 
 
 INSERT IGNORE INTO clientes (id, nombre, nacionalidad, telefono, correo) VALUES
 (1, 'Allan López', 'Guatemalteca', '55551234', 'allan@example.com');
+
+-- Usuarios de prueba (clave: password)
+INSERT IGNORE INTO usuarios (id, usuario, password_hash, nombre, rol, activo) VALUES
+(1, 'admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Allan López (Admin)', 'Administrador', 1),
+(2, 'agente', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Agente de Ventas', 'Agente de ventas', 1);
